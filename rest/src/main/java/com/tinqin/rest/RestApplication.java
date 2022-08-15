@@ -1,13 +1,13 @@
-package com.tinqin.libraryexternalapi;
+package com.tinqin.rest;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class LibraryExternalApiApplication {
+public class RestApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(LibraryExternalApiApplication.class, args);
+        SpringApplication.run(RestApplication.class, args);
     }
 
 }
