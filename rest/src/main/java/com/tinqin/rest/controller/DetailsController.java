@@ -23,7 +23,7 @@ public class DetailsController {
     }
 
     @PostMapping("/getBookDetails")
-    public ResponseEntity<?> changePublisher(@RequestBody final BookDetailsRequest bookDetailsRequest) throws IOException, InterruptedException {
+    public ResponseEntity<?> getBookDetails(@RequestBody final BookDetailsRequest bookDetailsRequest) throws IOException, InterruptedException {
         Either<Error, BookDetailsResponse> response=bookDetailsProcessor.process(bookDetailsRequest);
         if(response.isLeft()){
             return ResponseEntity.status(response.getLeft().getCode()).body(response.getLeft().getMessage());
